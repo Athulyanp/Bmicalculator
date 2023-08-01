@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Domine:wght@400;500;600;700&family=Exo+2:ital,wght@1,200&family=Great+Vibes&family=Pacifico&display=swap');
+
+:root{
+    --tyrian-purple: #501537;
+    --magenta: #922d50;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courgette', cursive;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   background: var(--tyrian-purple);
+   color: rgba(0,0,0,0.9);
+   padding: 30px 0;
+}
+.box{
+    width: 400px;
+    background: #fafafa;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 2px 2px 20px 5px rgba(0,0,0,0.5);
+   
+}
+h1{
+   font-weight: bold;
+   font-size: 36px;
+   padding: 7px 0;
+    
+}
+.content{
+    padding: 0 20px;
+}
+.input{
+    background: #fff;
+    box-shadow: 0px 0px 95px -30px rgba(0,0,0,0.15);
+   padding: 20px 0;
+   margin-bottom: 10px;
+    
+}
+.input label{
+    display: block;
+    font-size: 18px;
+   font-weight: 500;
+   color: #000;
+   margin-bottom: 10px;
+}
+.input input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #4f7df9;
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Nunito",sans-serif;
+}
+.inputW{
+    background: #fff;
+    box-shadow: 0px 0px 95px -30px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 10px 0;
+  margin-bottom: 20px;
+
+}
+.inputW label{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+}
+.inputW input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #4f7df9;
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Nunito",sans-serif;
+}
+.inputH{
+    background-color: #fff;
+    box-shadow: 0px 0px 95px -30px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+}
+.inputH label{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+}
+.inputH input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #4f7df9;
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Nunito",sans-serif;
+}
+button .Calculate{
+    cursor: pointer;
+    font-family: "Nunito",sans-serif;
+    color: #fff;
+    background: rgb(97,138,254,1);
+    font-size: 16px;
+    border-radius:80px;
+    padding: 10px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: all 0.5s;
+
+}
+button .Calculate:hover{
+    background: blue;
+}
+#submit{
+   background-color: #0044ff;
+    
+}
+.result{
+    padding: 10px 10px;
+}
+.result p{
+    font-weight: 600;
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 15px;
+}
+.result #result{
+    font-size:26px ;
+    font-weight: 900;
+    color: #0044ff;
+    background-color: #eaeaea;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 55px;
+    margin-bottom: 25px;
+}
+#comment{
+    color: #4f7df9;
+}
+.comment{
+    display: none;
+    border: dashed 1px;
+    border-radius: 7px;
+    padding: 5px;
+}
+.gender{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background: #fff;
+    box-shadow: 0px 0px 95px -30px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+
+}
+.gender .container{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 7px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.gender.container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 50%;
+
+}
+.gender .container:hover input ~ .checkmark{
+    background-color: #ccc;
+}
+.gender.container input:checked ~ .checkmark{
+    background-color: #2196f3
+}
+.checkmark::after{
+    content: "";
+    position: absolute;
+    display: none;
+
+}
+.gender .container input:checked ~ .checkmark::after{
+    display: block;
+}
+@media (max-width:700px) 
+{
+    .box{
+        width: 380px;
+    }
+    .input label{
+        font-size: 18px
+    }
+    .inputH label,.inputW label{
+        font-size: 14px;
+    }
+    .input input ,.inputH input, .inputW input{
+        font-size: 24px;
+    }
+    
+}
